@@ -50,7 +50,7 @@ class optimize:
                             i[2]=str(is_two)
                     
                     elif(self.string_to_num(i[1])):
-                        is_two=self.isPowerOfTwo(i[1])
+                        is_two=self.isPowerOfTwo(int(i[1]))
                         if(is_two):
                             i[0]="<<"
                             i[1]=i[2]
@@ -136,12 +136,14 @@ class optimize:
     def process(self):
         scam=copy.deepcopy(self.basicblocks)
         self.strength_red()
+        self.show()
         self.const_fold()
         self.const_prop()
         while(scam!=self.basicblocks):
             scam=copy.deepcopy(self.basicblocks)
             self.const_fold()
             self.const_prop()
+            # self.strength_red()
         self.remove_dead_control()
 
         
@@ -164,7 +166,7 @@ class optimize:
 
 
 icg=optimize()
-# print(icg.show())
+print(icg.show())
 
 
 icg.process()
