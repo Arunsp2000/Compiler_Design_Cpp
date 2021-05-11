@@ -1,0 +1,5 @@
+
+We can change the filenames in ./script.sh and then
+
+./script.sh
+python3 optimization.py
