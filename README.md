@@ -4,4 +4,4 @@
 
 Run ```./script.sh```.
 
-Run ```python3 optimization.py]```.
+Run ```python3 optimization.py```.
